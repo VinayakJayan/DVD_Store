@@ -1,0 +1,102 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}
+
+    {% endblock %}
+  </title>
+  <link rel="stylesheet" href="{%static '/css/style.css'%}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootsrap/3.4.1/css/bootsrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootsrap/3.4.1/js/bootsrap.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fonts-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #d6e620;
+  -webkit-text-fill-color: rgb(25, 8, 52);
+}
+
+.bg-img {
+
+  background-image: url("cover.jpg");
+
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+  position: relative;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #02232b;
+}
+
+.topnav a {
+  float: left;
+  color: #9cdb92;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: rgb(181, 220, 64);
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #78efb4;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04a7aa;
+  color: rgb(165, 27, 27);
+}
+h3 {
+  text-decoration-style: wavy;
+  text-decoration-thickness: 50%;
+  text-decoration-color: #3b4508;
+}
+.topnav .login-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width:120px;
+}
+
+</style>
+<body>
+  <center>
+  <nav class="navbar bg-primary navbar-expand-md">
+    <div class="container">
+      <div class="col-2 text-left pl-md-0">
+        <h2 class="text-decoration-thickness"><b>DISNEY DVD</b></h2>
+        <p><i>A Professional company that you can trust</i></p>
+      </div></center>
+      <div class="topnav">
+        <a class="active" href="{% url 'index'%}">Home</a>
+        <a href="{% url 'movies'%}">Movies</a>
+        <a href="{% url 'contact'%}">Contact</a>
+        <a href="{% url 'order'%}">Order</a>
+        <a href="{% url 'about'%}">About</a>
+    </div>
+  </nav>
+  {% block content %}
+
+  {% endblock %}
+
+</body>
+</html>

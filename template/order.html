@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{% block title %}Order{%endblock%}
+
+    {%block content%}
+<center>
+<div class="container p-3 text-center">
+    
+    <h1>Order Your Favourate Collection</h1><br><br>
+<form action="" method="POST">
+    {% csrf_token %}
+
+{{form.as_p}}
+<button class="btn">Order Now</button>
+
+</form>
+</div>
+</center>
+
+
+{% endblock %}

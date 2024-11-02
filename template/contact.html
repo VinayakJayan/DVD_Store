@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% block title %}Contact{%endblock%}
+
+{% block content %}
+{%load static%}
+<center>
+<h1 class="text-center">Contact Us</h1>
+<hr>
+{% for i in contactkey %}
+<div class="container">
+    <img src="{% static 'images/coverpic.jpg' %}" alt="" width="20%">
+    <h2>{{i.c_name}}</h2>
+    <p><b>{{i.c_phone}}</b></p>
+    <p>{{i.c_email}}</p>
+    <p><i>Contact us today to learn more about our services and how we can help you organize the top event management in Kerala.</i></p>
+
+</div>
+{% endfor %}
+</center>
+
+
+{% endblock %}
